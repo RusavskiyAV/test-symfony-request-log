@@ -1,0 +1,6 @@
+index:
+    path: /
+    controller: App\Controller\IndexController::index
+
+_requst_log:
+    resource: '@RusavskiyAVRequestLogBundle/Resources/config/routes.yaml'
