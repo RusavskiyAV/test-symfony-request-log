@@ -286,16 +286,25 @@
         },
         {
             "name": "rusavskiyav/request-log",
-            "version": "dev-master",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RusavskiyAV/request-log-bundle.git",
+                "reference": "0660161b8e0e4cd0180aa14f9f77ade70e353596"
+            },
             "dist": {
-                "type": "path",
-                "url": "../RequestLogBundle",
-                "reference": "ac99cc1eb3cc60cbe16ee26fbedcdfd0747c57c2"
+                "type": "zip",
+                "url": "https://api.github.com/repos/RusavskiyAV/request-log-bundle/zipball/0660161b8e0e4cd0180aa14f9f77ade70e353596",
+                "reference": "0660161b8e0e4cd0180aa14f9f77ade70e353596",
+                "shasum": ""
             },
             "require": {
                 "php": ">=7.4",
-                "psr/log": "^1.1"
+                "psr/log": "^1.1",
+                "symfony/twig-bundle": "^5.4",
+                "twig/twig": "^3.3"
             },
+            "default-branch": true,
             "type": "symfony-bundle",
             "autoload": {
                 "psr-4": {
@@ -315,9 +324,11 @@
                 "logger",
                 "request"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/RusavskiyAV/request-log-bundle/tree/main",
+                "issues": "https://github.com/RusavskiyAV/request-log-bundle/issues"
+            },
+            "time": "2022-02-15T21:13:35+00:00"
         },
         {
             "name": "symfony/cache",
@@ -3662,5 +3673,5 @@
         "ext-iconv": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.2.0"
 }

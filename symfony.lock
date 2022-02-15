@@ -18,7 +18,7 @@
         "version": "dev-latest"
     },
     "rusavskiyav/request-log": {
-        "version": "dev-master"
+        "version": "dev-main"
     },
     "squizlabs/php_codesniffer": {
         "version": "3.6",

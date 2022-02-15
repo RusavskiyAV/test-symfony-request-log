@@ -1,0 +1,33 @@
+version: "3.7"
+services:
+  test-symfony-php-fpm:
+    build:
+      context: ./docker/
+      dockerfile: php-fpm.docker
+    volumes:
+      - ./:/app
+    environment:
+      XDEBUG_CONFIG: "remote_host=host.docker.internal remote_enable=1"
+      PHP_IDE_CONFIG: "serverName=Docker"
+
+  test-symfony-nginx:
+    build:
+      context: ./docker/
+      dockerfile: nginx.docker
+    volumes:
+      - ./:/app
+    depends_on:
+      - test-symfony-php-fpm
+    ports:
+      - "8080:80"
+
+  test-symfony-php-cli:
+    build:
+      context: ./docker/
+      dockerfile: php-cli.docker
+    volumes:
+      - ./:/app
+      - composer:/root/.composer/cache
+
+volumes:
+  composer:
